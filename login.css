@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Use 100vh to fill the viewport height */
-    background-color: #f0f0f0;
+    background-color: #b38ed6;
     background-image: url('image.jpg'); 
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-position: center; /* Centers the background image */
@@ -12,11 +12,11 @@ body {
 }
 
 .login-container {
-    background-color: #6a5acd; 
+    background-color: #695acdc7; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 370px;
     text-align: center;
 }
 
