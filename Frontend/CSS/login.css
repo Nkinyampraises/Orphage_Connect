@@ -2,14 +2,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Use 100vh to fill the viewport height */
+    height: 100vh; 
     background-image:url(../Images/image.jpg) ;
     background-color: rgb(196, 158, 232);
     background-blend-mode: darken;
 }
 
 .login-container {
-    background-color: #5d4ebe; 
+    background-color:#7fa6fa;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -25,9 +25,9 @@ body {
 }
 
 label {
-    width: 30%; /* Adjust width as needed */
+    width: 30%; 
     text-align: right;
-    margin-right: 10px; /* Space between label and input */
+    margin-right: 10px; 
 }
 
 input[type="text"], input[type="password"] {

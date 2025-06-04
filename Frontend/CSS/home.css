@@ -6,10 +6,6 @@ body {
     margin: 0;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 .title {
     font-style: oblique;
     font-size: 60px;
@@ -31,7 +27,7 @@ body::-webkit-scrollbar {
     background-position: center;
     background-size: cover;
     position: relative;
-    color: rgb(108, 16, 255);
+    color: #7fa6fa;
     font-style: oblique;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -43,7 +39,7 @@ body::-webkit-scrollbar {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #7b68bed2;
+    background-color: #7fa6fa;
     opacity: 0.5;
     z-index: 1; 
 }
@@ -70,13 +66,13 @@ body::-webkit-scrollbar {
     align-items: center;
     top: 76.2%;
     color: aliceblue;
-    background-color: #7957f2d2;
+    background-color: #7fa6fa;
 }
 
 a {
     color: rgb(240, 240, 241);
     text-align: center;
-    background-color: #7455e3d2;
+    background-color: #7fa6fa;
     padding: 10px 25px;
     display: inline-block;
     text-decoration: none;
@@ -89,11 +85,11 @@ a:hover {
 .donation-image {
     width: 80px;
     max-height: 50px;
-    margin: 0;/* Spacing above and below the image */
+    margin: 0;
 }
 
 .registration-image {
     width: 100px;
     max-height: 60px;
-    margin: 0;/* Spacing above and below the image */
+    margin: 0;
 }

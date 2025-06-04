@@ -12,7 +12,7 @@ h1 {
 }
 
 form {
-    background-color: #6f57c5;
+    background-color: #7fa6fa;
     position: fixed;
     top: 2.5%;
     bottom: 0;
@@ -21,7 +21,7 @@ form {
     border-radius: 5px;
     display: flex;
     width: 30%;
-    height: 94vh;
+    height: 74vh;
     flex-direction: column;
     align-items: center;
     color: white;

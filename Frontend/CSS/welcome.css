@@ -32,7 +32,7 @@ body::before{
 }
 
 header {
-    background: #6a5acd;
+    background: #5182ee;
     color: white;
     padding: 10px 20px;
 }
@@ -41,7 +41,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #7957f2d2;
+    background-color:#7fa6fa;
 }
 
 .logo {
@@ -130,7 +130,7 @@ p {
     font-size: 16px;
     max-width: 300px;
     margin: 20px auto;
-    color: #6a5acd;
+    color: #7fa6fa;
 }
 
 .p2 {
@@ -139,9 +139,8 @@ p {
     font-size: 16px;
     max-width: 300px;
     margin: 20px auto;
-    color: #6a5acd;
+    color: #7fa6fa;
 }
-
 .p3 {
     font-weight: bold;
     text-align: right;
@@ -155,7 +154,7 @@ p {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #6a5acd;
+    background: #7fa6fa;
     color: white;
     position: relative;
     bottom: 0;
@@ -170,12 +169,13 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 150px;
-    background-color: aliceblue;
+    gap: 100px;
+     padding: 20px;
+    background-color:#cdebf7; ;
 }
 
 .team-member {
-    background-color:#6a5acd;
+    background-color:#7fa6fa;
     border-radius: 10px;
     padding: 20px;
     width: 200px; 
