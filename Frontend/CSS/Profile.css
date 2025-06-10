@@ -1,6 +1,6 @@
 body {
             background-color: rgb(195, 213, 213);
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../Images/Screenshot 2025-05-05 212457 - Copy.png');
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../../Frontend/Images/screenshot.jpeg 2025-05-05 212457 - Copy.png');
             background-size: cover;
             background-attachment: fixed;
             background-blend-mode: darken;

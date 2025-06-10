@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORPHANAGE CONNECT</title>
-    <link rel="stylesheet" href="../CSS/profile.css"> 
+    <link rel="stylesheet" href="../../Frontend/CSS/Profile.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">     
 </head>
 <body>
@@ -22,12 +22,12 @@
                     <button type="button" class="upload-btn" onclick="document.getElementById('profile-upload').click()">
                         Upload Profile Picture
                     </button>
-                    <label for="profile-upload" class="visually-hidden">Profile Photo</label>
+                    <label for="profile-upload" class="visually-hidden"></label>
                     <input type="file" id="profile-upload" name="profile-photo" accept="image/*" title="Upload your profile photo" placeholder="Choose a profile photo">
                 </div>
             </section>
             
-            <form>
+            <form action="../Backend/Profile.php" method="post">
                 <p>
                     <label for="orphanageName">Orphanage Name</label>
                     <input type="text" id="orphanageName" name="orphanageName" placeholder="Enter orphanage name" required>
