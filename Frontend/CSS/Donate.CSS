@@ -8,21 +8,26 @@ body {
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
-    background-attachment: fixed;
+    background-attachment: relative;
 }
+body::-webkit-scrollbar {
+    display: none;
+    /* Allows scrolling while keeping the scroll bars hidden For Chrome, Safari, and Edge */
+ }
 header{
     display: flex;
     background-color: #7fa6fa;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     height: 80px;
     align-items: center;
     width: 100%;
     color: rgb(250, 234, 53);
     font-style: initial;
+    justify-content: space-between;
 }
 header h1 {
-    margin-right: 20px;
+    margin-right: 10px;
     padding: 20px;
     text-align: left;
     font-size: smaller;
@@ -35,22 +40,45 @@ p {
     margin: 0 40px;
 }
 .container {
-    padding: 30px;
-    border-color: sandybrown;
+    padding-top: 30px;
+    /*padding-bottom: 30px;*/
+    margin: 0;
+    /*border-color: sandybrown;*/
     width: 100%;
-    height: 30%;
+    height: 40vh;
+    justify-items: center;
+    align-items: center;
     background-color: #7fa6fa;
-    background-image: url('../Images/Screenshot 2025-05-05 212457 - Copy.png');
-    background-size: cover;
+    background-image: url('../Images/screenshot.jpeg');
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
     background-blend-mode: darken;
-    color: rgb(255, 230, 0);
-    text-align: center;
+    /*color: rgb(255, 230, 0);
+    text-align: center;*/
     font-family: 'Times New Roman', Times, serif;
 }
- .dropdown {
+.container h2{
+    color: rgb(255, 230, 0);
+    text-align: center;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.dropdown {
             position: relative;
-            display: inline-block;
+            /*display: inline-block;*/
+            position: relative;
+            left: 30%
         }
     
         .dropdown-content {
@@ -60,10 +88,12 @@ p {
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
+            width: 20%
         }
         .dropdown-content p {
-            padding: 12px 16px;
-            cursor: pointer;
+            padding: 16px;
+            cursor:pointer;
+            width: 50%
         }
         .dropdown-content p:hover {
             background-color: #f1f1f1;
@@ -76,20 +106,25 @@ p {
             font-size: 20px;
             margin-left: 5px;
         }
+        ul {
+            list-style-type: none;
+        }
+
 .search-bar {
-            position: absolute;
-            top: 207px; 
-            right: 700px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
         button {
             padding: 10px;
             border: none;
-            background-color: #007bff;
+            background-color: #7fa6fa;
             color: white;
             border-radius: 5px;
             cursor: pointer;
@@ -101,7 +136,7 @@ p {
             width: 100%;
             height: 2100px;
             background-color: rgba(249, 243, 249, 0.97);
-            padding: 20px;
+            padding: 0px;
             border-radius: 10px;
         }
         .Contact-Us { 
@@ -117,11 +152,13 @@ p {
             color: #2e2525;
             margin-left: 390px;
             margin-bottom: 100%;
-           
+
         }
 footer {
     text-align: center;
-    padding: 20px;
+    /*padding: 20px;*/
+    padding-bottom: 20px;
+    padding-top: 20px;
     background: #7fa6fa;
     color: white;
     position: relative;
@@ -129,3 +166,18 @@ footer {
     width: 100%;
     margin-top: 90%;
 }
+
+
+a{
+    text-decoration:none;
+    color: white;
+    padding: 10px;
+    border: none;
+    /*background-color: #007bff;*/
+    border-radius: 5px;
+    cursor: pointer;
+}
+a:hover {
+    background-color: #0056b3;
+}
+

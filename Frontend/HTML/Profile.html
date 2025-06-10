@@ -22,7 +22,8 @@
                     <button type="button" class="upload-btn" onclick="document.getElementById('profile-upload').click()">
                         Upload Profile Picture
                     </button>
-                    <input type="file" id="profile-upload" name="profile-photo" accept="image/*">
+                    <label for="profile-upload" class="visually-hidden">Profile Photo</label>
+                    <input type="file" id="profile-upload" name="profile-photo" accept="image/*" title="Upload your profile photo" placeholder="Choose a profile photo">
                 </div>
             </section>
             
@@ -83,8 +84,8 @@
                     <textarea id="project" name="project" placeholder="Describe your project, needs, and goals..."></textarea>
                 </p>
                 
-                <button class="submit-btn">
-                    <a href="Donate.html">SUBMIT PROFILE</a>
+                <button class="submit-btn" type="submit">
+                    SUBMIT PROFILE
                 </button>
             </form>
         </main>

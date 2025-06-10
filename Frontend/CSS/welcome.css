@@ -5,6 +5,9 @@ body {
     color: rgb(255, 255, 255); 
     position: relative;
 }
+body::-webkit-scrollbar {
+    display: none;/* Allows scrolling while keeping the scroll bars hidden For Chrome, Safari, and Edge */
+}
 
 body::before{
     content: "";
@@ -19,12 +22,15 @@ body::before{
 
 .welcome-section {
     background-color: rgba(12, 26, 212, 0.5);  
-    padding: 20px;
-    border-radius: 10px;
+    /*background-color: #5182ee;*/
+    padding-top: 20px;
+    border-radius: 5px;
     width: 100%; 
+    margin: 0;
 }
 .back {
-     background-image: image-set(url('../Images/image.jpg'));
+    background-image: -webkit-image-set(url('../Images/image.jpg'));
+    background-image: image-set(url('../Images/image.jpg'));
     background-size: cover; 
     background-position: center;
     background-blend-mode: darken; 
@@ -33,15 +39,16 @@ body::before{
 
 header {
     background: #5182ee;
+    /*background:#7fa6fa;*/
     color: white;
-    padding: 10px 20px;
+    padding: 5px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#7fa6fa;
+    background-color:#5182ee;;
 }
 
 .logo {
@@ -74,7 +81,7 @@ nav {
 }
 
 .welcome-section {
-    margin: 20px;
+    margin: 0;
     text-align: center;
 }
 
@@ -170,7 +177,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
-     padding: 20px;
+    padding: 20px;
     background-color:#cdebf7; ;
 }
 
@@ -186,4 +193,9 @@ footer {
     width: 90%;
     border-radius: 40%; 
     height: auto; 
+}
+
+h2{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

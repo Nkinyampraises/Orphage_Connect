@@ -13,6 +13,10 @@ body {
             padding: 20px;
         }
         
+body::-webkit-scrollbar {
+            display: none;/* Allows scrolling while keeping the scroll bars hidden For Chrome, Safari, and Edge */       
+}
+        
         .container {
             padding: 30px;
             background-color: #7fa6fa;
