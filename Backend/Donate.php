@@ -1,6 +1,8 @@
  <?php
     // Database connection and data fetching
     require_once 'config/db.php'; // Update this path
+    // Get the document root and normalize paths
+    $docRoot = str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT']));
 
     // Initialize variables
     $profiles = [];
@@ -111,7 +113,7 @@
      </div>
      <div class="search-bar">
          <form action="../Backend/Donate.php" method="GET">
-             <input type="text" placeholder="Search by name or location..." name="search" value="<?php echo htmlspecialchars($search); ?>">
+             <input type="text<" placeholder="Search by name or location..." name="search" value="<?php echo htmlspecialchars($search); ?>">
              <input type="hidden" name="town" id="townInput" value="<?php echo htmlspecialchars($selectedTown); ?>">
              <button type="submit"><i class="fas fa-search"></i></button>
          </form>
@@ -129,7 +131,22 @@
                  <?php foreach ($profiles as $profile): ?>
                      <div class="profile-card">
                          <?php if (!empty($profile['profile_picture'])): ?>
-                             <img src="<?php echo htmlspecialchars($profile['profile_picture']); ?>" alt="Profile Picture" class="profile-img">
+                             <?php
+                                // Convert backslashes to forward slashes
+                                $imagePath = str_replace('\\', '/', $profile['profile_picture']);
+
+                                // Convert absolute path to web URL
+                                if (strpos($imagePath, $docRoot) === 0) {
+                                    $src = str_replace($docRoot, '', $imagePath);
+                                    // Ensure path starts with a slash
+                                    if ($src[0] !== '/') {
+                                        $src = '/' . $src;
+                                    }
+                                } else {
+                                    $src = $imagePath;
+                                }
+                                ?>
+                             <img src="<?= htmlspecialchars($src) ?>" alt="Profile Picture" class="profile-img">
                          <?php else: ?>
                              <div class="default-profile-icon">
                                  <i class="fas fa-user-circle profile-icon"></i>
@@ -174,9 +191,15 @@
      <div class="Contact-Us" id="Contact-Us">
          <h3>Contact us at:</h3>
          <ul>
-             <li><i class="fas fa-phone"></i> 678950512</li>
-             <li><i class="fas fa-phone"></i> 671562474</li>
-             <li><i class="fas fa-envelope"></i> njobelovelinenkeni@gmail.com</li>
+            <p style="color: blue;">click on the buttons bellow to chat</p>
+             <li>
+                 <i class="fas fa-envelope"></i>
+                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=njobelovelinenkeni@gmail.com" target="_blank">njobelovelinenkeni@gmail.com</a>
+             </li>
+             <li>
+                 <i class="fab fa-whatsapp"></i>
+                 <a href="https://wa.me/237678950512" target="_blank">Chat on WhatsApp</a>
+             </li>
          </ul>
      </div>
 

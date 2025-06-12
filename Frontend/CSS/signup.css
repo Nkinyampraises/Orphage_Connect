@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(235, 244, 254);
-    background-image: url(../Images/image.jpg);
+    background-color: rgb(254, 255, 255);
+    background-image: url("../Images/image.jpg");
     background-blend-mode: darken;
 }
 
@@ -12,7 +12,7 @@ h1 {
 }
 
 form {
-    background-color: #7fa6fa;
+    background-color: #7fa6fae6;
     position: fixed;
     top: 2.5%;
     bottom: 0;

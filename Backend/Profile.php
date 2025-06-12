@@ -206,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_profile'])) {
 
                 <p>
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+237" required>
+                    <input type="tel" id="phone" name="phone" placeholder="contact" required>
                 </p>
 
                 <p>
