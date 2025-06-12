@@ -10,6 +10,12 @@ body {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
+        .orphanage-info {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+        }
         h1 {
             text-align: center;
             color: #007bff;

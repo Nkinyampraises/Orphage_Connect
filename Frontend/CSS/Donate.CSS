@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fcfafcda;
-    background-image:url('Images/Screenshot 2025-05-05 212457 - Copy.png');
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -74,46 +73,75 @@ p {
     z-index: 1;
 }
 
+/* Dropdown container */
 .dropdown {
-            position: relative;
-            /*display: inline-block;*/
-            position: relative;
-            left: 30%
-        }
-    
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fbfcfd;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            width: 20%
-        }
-        .dropdown-content p {
-            padding: 16px;
-            cursor:pointer;
-            width: 50%
-        }
-        .dropdown-content p:hover {
-            background-color: #f1f1f1;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block; 
-        }
-        .arrow {
-            cursor: pointer;
-            font-size: 20px;
-            margin-left: 5px;
-        }
-        ul {
-            list-style-type: none;
-        }
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    top: 55%;
+    left: 30%;
+}
+/* Dropdown button */
+.dropbtn {
+    background: #f4f8fc;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
+/* Arrow styling */
+.arrow {
+    color: #9392c6;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+}
+
+/* Show dropdown when active */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Rotate arrow when active */
+.dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+}
 .search-bar {
     position: absolute;
-    top: 60vh;
+    top: 65%;
     left: 50%;
+
 }
 
 input[type="text"] {
@@ -132,13 +160,146 @@ input[type="text"] {
         button:hover {
             background-color: #0056b3;
         }
-        .content {
-            width: 100%;
-            height: 2100px;
-            background-color: rgba(249, 243, 249, 0.97);
-            padding: 0px;
-            border-radius: 10px;
-        }
+        /* General Styles */
+.content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 1%;
+    background: #7fa6fa;
+    height: 500%;
+}
+
+/* Profiles Grid Layout */
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .profiles-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Profile Card Styles */
+.profile-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Image Styles */
+.profile-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.default-profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-icon {
+    font-size: 5rem;
+    color: #ccc;
+}
+
+/* Card Content Styles */
+.profile-card > div:not(.default-profile-icon) {
+    padding: 1.5rem;
+}
+
+.profile-card h3 {
+    margin: 0 0 0.5rem;
+    color: #2c3e50;
+    font-size: 1.25rem;
+}
+
+.profile-card p {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.profile-card p strong {
+    color: #333;
+}
+
+/* Button Styles */
+.donate-btn {
+    margin-top: auto;
+    background: #3f3ce7;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.donate-btn:hover {
+    background: #c0392b;
+}
+
+.donate-btn i {
+    font-size: 1rem;
+}
+
+/* No Profiles Message */
+.no-profiles {
+    text-align: center;
+    padding: 3rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.no-profiles p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.register-btn {
+    background: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #2980b9;
+}
         .Contact-Us { 
             align-items: center;
             text-align: center;
@@ -166,8 +327,21 @@ footer {
     width: 100%;
     margin-top: 90%;
 }
-
-
+.map-container {
+            height: 200px;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .location-link {
+            color: #1a73e8;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .location-link:hover {
+            color: #0d5bba;
+        }
 a{
     text-decoration:none;
     color: white;
